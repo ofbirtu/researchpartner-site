@@ -16,10 +16,76 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="_ds/default-deck-template-ccbbe379-4b97-4ca7-9620-36578c76e0c5/tokens/colors.css">
-<link rel="stylesheet" href="_ds/default-deck-template-ccbbe379-4b97-4ca7-9620-36578c76e0c5/tokens/typography.css">
-<link rel="stylesheet" href="_ds/default-deck-template-ccbbe379-4b97-4ca7-9620-36578c76e0c5/tokens/forms.css">
-<link rel="stylesheet" href="_ds/default-deck-template-ccbbe379-4b97-4ca7-9620-36578c76e0c5/styles.css">
+<style id="pp-tokens">
+/* Paper Pieces — colour. NO pure white exists in this palette. */
+:root {
+  /* Core neutrals */
+  --pp-ink: #0A0A0A;          /* primary text + dark ground */
+  --pp-paper: #E8E8EC;        /* cards / surfaces (the only "light") */
+  --pp-line: #DCDAD2;         /* borders + the neutral "paper" slide ground */
+  --pp-muted: #7E7C74;        /* secondary / caption text */
+
+  /* Accents — used as slide grounds AND as paper pieces */
+  --pp-chartreuse: #CFD64B;   /* primary accent / highlight / chart lead */
+  --pp-khaki: #A2926A;
+  --pp-peri: #C2CBE9;         /* periwinkle */
+  --pp-peach: #F4C3AB;
+
+  /* Chartreuse highlight / heat ramp (matrix cells, glows) */
+  --pp-hm-1: rgba(207,214,75,0.16);
+  --pp-hm-2: rgba(207,214,75,0.36);
+  --pp-hm-3: rgba(207,214,75,0.56);
+  --pp-hm-4: rgba(207,214,75,0.79);
+  --pp-hm-5: rgba(207,214,75,1);
+
+  /* ---- Semantic aliases ---- */
+  --text-body: var(--pp-ink);
+  --text-muted: var(--pp-muted);
+  --text-on-dark: #FFFFFF;          /* white text is ONLY allowed on the dark ground */
+  --surface-card: var(--pp-paper);
+  --surface-card-dark: var(--pp-ink);
+  --border-line: var(--pp-line);
+  --accent-primary: var(--pp-chartreuse);
+
+  /* Grounds */
+  --ground-neutral: var(--pp-line);  /* greige "paper" slide */
+  --ground-dark: var(--pp-ink);
+  --ground-dark-glow: radial-gradient(ellipse 110% 70% at 50% 132%, rgba(207,214,75,0.55) 0%, rgba(207,214,75,0.16) 27%, rgba(207,214,75,0) 56%), #0A0A0A;
+}
+
+/* Paper Pieces — type. Montserrat everywhere; JetBrains Mono for technical labels only. */
+:root {
+  --font-display: 'Montserrat', system-ui, sans-serif;  /* all display + body */
+  --font-mono: 'JetBrains Mono', monospace;             /* [ LOGO ], tickets, tech labels */
+
+  /* Weights */
+  --fw-display: 800;   /* titles, big numbers */
+  --fw-heading: 700;   /* headings, eyebrows */
+  --fw-body: 500;      /* body, labels */
+  --fw-body-strong: 600;
+
+  /* Type scale — authored at 1920×1080. Min on-slide text = 24px. */
+  --fs-display: 140px;     /* hero titles */
+  --fs-divider: 180px;     /* chapter-divider numbers/titles */
+  --fs-stat-xl: 240px;     /* one giant key figure */
+  --fs-stat: 120px;        /* stat callouts */
+  --fs-h1: 80px;
+  --fs-h2: 60px;
+  --fs-h3: 36px;
+  --fs-lead: 32px;
+  --fs-body: 28px;
+  --fs-small: 24px;
+  --fs-eyebrow: 24px;      /* 700, uppercase, .12em */
+  --fs-kicker: 26px;       /* divider kicker, .14em */
+  --fs-logo: 22px;         /* the mono [ LOGO ] box — fixed by convention */
+
+  /* Tracking */
+  --tracking-display: -0.02em;
+  --tracking-eyebrow: 0.12em;
+  --tracking-kicker: 0.14em;
+}
+
+</style>
 <style>html{background:#F1F0EB}html:not([data-ready]) body{visibility:hidden}</style>
 <script src="./support.js"></script>
 </head>
