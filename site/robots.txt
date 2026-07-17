@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://researchpartner.uk/sitemap.xml

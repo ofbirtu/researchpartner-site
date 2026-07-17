@@ -1,0 +1,162 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": []
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Montserrat|JetBrains Mono))/i]",
+        "message": "Font not provided by the design system. Available: Montserrat, JetBrains Mono."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--accent-primary",
+      "--border-line",
+      "--font-display",
+      "--font-mono",
+      "--fs-body",
+      "--fs-display",
+      "--fs-divider",
+      "--fs-eyebrow",
+      "--fs-h1",
+      "--fs-h2",
+      "--fs-h3",
+      "--fs-kicker",
+      "--fs-lead",
+      "--fs-logo",
+      "--fs-small",
+      "--fs-stat",
+      "--fs-stat-xl",
+      "--fw-body",
+      "--fw-body-strong",
+      "--fw-display",
+      "--fw-heading",
+      "--ground-dark",
+      "--ground-dark-glow",
+      "--ground-neutral",
+      "--pp-chartreuse",
+      "--pp-form-flower",
+      "--pp-form-loop",
+      "--pp-form-pebble",
+      "--pp-form-pebble-2",
+      "--pp-form-splatter",
+      "--pp-form-ticket",
+      "--pp-form-torn-rect",
+      "--pp-form-torn-rect-lg",
+      "--pp-hm-1",
+      "--pp-hm-2",
+      "--pp-hm-3",
+      "--pp-hm-4",
+      "--pp-hm-5",
+      "--pp-ink",
+      "--pp-khaki",
+      "--pp-line",
+      "--pp-muted",
+      "--pp-paper",
+      "--pp-peach",
+      "--pp-peri",
+      "--surface-card",
+      "--surface-card-dark",
+      "--text-body",
+      "--text-muted",
+      "--text-on-dark",
+      "--tracking-display",
+      "--tracking-eyebrow",
+      "--tracking-kicker"
+    ],
+    "tokenKinds": {
+      "--pp-ink": "color",
+      "--pp-paper": "color",
+      "--pp-line": "color",
+      "--pp-muted": "color",
+      "--pp-chartreuse": "color",
+      "--pp-khaki": "color",
+      "--pp-peri": "color",
+      "--pp-peach": "color",
+      "--pp-hm-1": "color",
+      "--pp-hm-2": "color",
+      "--pp-hm-3": "color",
+      "--pp-hm-4": "color",
+      "--pp-hm-5": "color",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-on-dark": "font",
+      "--surface-card": "color",
+      "--surface-card-dark": "color",
+      "--border-line": "color",
+      "--accent-primary": "color",
+      "--ground-neutral": "color",
+      "--ground-dark": "color",
+      "--ground-dark-glow": "other",
+      "--font-display": "font",
+      "--font-mono": "font",
+      "--fw-display": "other",
+      "--fw-heading": "other",
+      "--fw-body": "other",
+      "--fw-body-strong": "other",
+      "--fs-display": "spacing",
+      "--fs-divider": "spacing",
+      "--fs-stat-xl": "spacing",
+      "--fs-stat": "spacing",
+      "--fs-h1": "spacing",
+      "--fs-h2": "spacing",
+      "--fs-h3": "spacing",
+      "--fs-lead": "spacing",
+      "--fs-body": "spacing",
+      "--fs-small": "spacing",
+      "--fs-eyebrow": "spacing",
+      "--fs-kicker": "spacing",
+      "--fs-logo": "spacing",
+      "--tracking-display": "font",
+      "--tracking-eyebrow": "font",
+      "--tracking-kicker": "font",
+      "--pp-form-flower": "other",
+      "--pp-form-pebble": "other",
+      "--pp-form-pebble-2": "other",
+      "--pp-form-splatter": "other",
+      "--pp-form-torn-rect": "other",
+      "--pp-form-torn-rect-lg": "other",
+      "--pp-form-ticket": "other",
+      "--pp-form-loop": "other"
+    },
+    "fontFamilies": [
+      "JetBrains Mono",
+      "Montserrat"
+    ]
+  }
+}
