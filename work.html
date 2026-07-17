@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230A0A0A'/><circle cx='50' cy='50' r='30' fill='%23F4C3AB'/></svg>">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <title>Selected Work — Maria Sakharova</title>
 <meta name="description" content="Case studies in UX research and product strategy across fintech, AI and edtech — Wise, Mastercard, Flagstone, WPP Open and more.">
 <link rel="canonical" href="https://researchpartner.uk/work.html">
@@ -11,7 +12,13 @@
 <meta property="og:title" content="Selected Work — Maria Sakharova">
 <meta property="og:description" content="Case studies in UX research and product strategy across fintech, AI and edtech — Wise, Mastercard, Flagstone, WPP Open and more.">
 <meta property="og:url" content="https://researchpartner.uk/work.html">
-<meta property="og:image" content="https://researchpartner.uk/uploads/IMG_7083.jpg">
+<meta property="og:image" content="https://researchpartner.uk/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Maria Sakharova — UX Research & Digital Strategy">
+<meta property="og:site_name" content="Maria Sakharova">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:image" content="https://researchpartner.uk/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,7 +134,8 @@
     nav{padding-left:16px!important;padding-right:16px!important}
     .nav-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:1px solid var(--pp-line);border-radius:10px;background:transparent;color:var(--pp-ink);font-size:20px;line-height:1;cursor:pointer}
     nav .nav-links{position:absolute;top:100%;left:0;right:0;display:none!important;flex-direction:column;align-items:stretch;gap:2px!important;background:#E8E8EC;border-bottom:1px solid var(--pp-line);padding:12px 18px 18px}
-    nav .nav-links>a{padding:13px 4px;font-size:16px!important;opacity:1!important}
+    nav .nav-links>a{padding:13px 4px;font-size:16px!important;opacity:1!important;font-weight:600!important}
+    nav .nav-links>a:last-child{display:none!important}
     #navtoggle:checked~.nav-links{display:flex!important}
     .pageRoot{padding-top:64px!important}
     section{padding-left:20px!important;padding-right:20px!important}
@@ -142,6 +150,66 @@ if(document.fonts&&document.fonts.load){
 setTimeout(go,2800);
 window.addEventListener('load',function(){setTimeout(function(){['index.html','work.html','about.html','services.html','mentorship.html'].forEach(function(h){if(decodeURIComponent(location.pathname).indexOf(h)>-1)return;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l);});},300);});})();
 </script>
+<style>
+  .swipe-hint{display:none}
+  .about-photo-m{display:none}
+@media (max-width:860px){
+  .detail-grid{display:flex!important;flex-direction:column!important;gap:24px!important}
+  .detail-left,.detail-right,.detail-right-inner{display:contents!important}
+  .detail-summary{order:1!important;margin:0!important}
+  .detail-keyinfo{order:2!important}
+  .detail-lead{order:3!important}
+  .detail-logo,.detail-connect{display:none!important}
+}
+@media (max-width:640px){
+  .pageRoot h1{font-size:30px!important;line-height:1.08!important;letter-spacing:-0.02em!important}
+  .pageRoot h2{font-size:23px!important;line-height:1.16!important;letter-spacing:-0.01em!important}
+  .pageRoot h3{font-size:15.5px!important}
+  .pageRoot p{font-size:15px!important;line-height:1.6!important}
+  .about-title{font-size:29px!important;line-height:1.08!important;margin-bottom:20px!important}
+  .about-story p{font-size:15.5px!important;line-height:1.62!important}
+  .mw{padding-left:22px!important;padding-right:22px!important}
+  .pageRoot>section{padding-top:46px!important;padding-bottom:46px!important}
+
+  section[data-screen-label="Hero"]{min-height:auto!important;padding-top:70px!important;padding-bottom:0!important}
+  .hero-inner{padding:8px 0 22px!important}
+  .hero-wrap{grid-template-columns:1fr!important;gap:2px!important;padding-left:22px!important;padding-right:22px!important}
+  .hero-portrait{order:0!important;min-height:250px!important;transform:none!important;margin:0 auto!important}
+  .hero-portrait>div{width:330px!important;height:312px!important;right:auto!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important}
+  .hero-portrait img{width:174px!important;height:174px!important}
+  .hero-portrait + div{order:1!important}
+  .hero-h1{font-size:33px!important;line-height:1.04!important;margin-bottom:14px!important}
+  .hero-sub{font-size:15px!important;line-height:1.55!important;margin-bottom:22px!important}
+  .hero-sub br{display:none!important}
+  .hero-ctas,.cta-row{flex-direction:column!important;align-items:stretch!important}
+  .hero-ctas>a,.cta-row>a{justify-content:center!important;width:100%!important;text-align:center!important}
+  .trusted-wrap{padding-bottom:30px!important}
+  .trusted-label{padding-bottom:26px!important}
+  #work-track>a.pp-card{flex:0 0 86%!important}
+  .pageRoot [id^="rail-track-"]>.pp-card{flex:0 0 82%!important}
+
+  .footer-bar{flex-direction:column!important;align-items:flex-start!important;gap:16px!important}
+  .footer-nav{flex-wrap:wrap!important;gap:14px 18px!important}
+
+  .kw-rail,.rev-rail{display:block!important;height:64vh!important;min-height:410px!important;column-count:auto!important;column-width:80vw!important;column-gap:18px!important;column-fill:auto!important;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;padding:2px 22px 12px 0!important;margin:0!important}
+  .kw-rail::-webkit-scrollbar,.rev-rail::-webkit-scrollbar{display:none}
+  .kw-card,.rev-card{width:auto!important;break-inside:avoid!important;-webkit-column-break-inside:avoid!important;margin:0 0 18px!important;scroll-snap-align:start}
+  .swipe-hint{display:inline-flex!important}
+
+  .about-photo-m{display:block!important}
+  .about-photos-side{display:none!important}
+
+  .rail-head{flex-wrap:wrap!important;gap:5px 10px!important;align-items:baseline!important}
+  .rail-title{order:1!important;flex:1 0 100%!important;font-size:21px!important;line-height:1.1!important}
+  .rail-eyebrow{order:2!important}
+  .rail-count{order:3!important}
+  .rail-arrows{order:4!important}
+  .cat-section,.detail-section{padding-left:22px!important;padding-right:22px!important}
+  .pageRoot [id^="rail-track-"]{margin:0!important;padding:4px 0 14px 0!important;scroll-padding-left:0!important}
+  .cat-chips{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+  .cat-chips>button{justify-content:space-between!important;padding-left:14px!important;padding-right:14px!important}
+}
+</style>
 </helmet>
 
 <div class="pageRoot" style="background:#F1F0EB;font-family:var(--font-display);color:var(--pp-ink);min-height:100vh;overflow-x:clip;padding-top:70px">
@@ -167,12 +235,12 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 
 <!-- ===================== CATALOGUE ===================== -->
 <sc-if value="{{ isCatalogue }}" hint-placeholder-val="{{ true }}">
-<section style="max-width:1200px;margin:0 auto;padding:30px 40px 90px">
+<section class="cat-section" style="max-width:1200px;margin:0 auto;padding:30px 40px 90px">
 
 <div style="margin-bottom:36px">
 <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--pp-muted);margin-bottom:14px">Research portfolio</div>
 <h1 style="font-weight:800;font-size:clamp(34px,4vw,50px);line-height:1.03;letter-spacing:-0.035em;margin:0 0 24px;max-width:840px">Selected case studies</h1>
-<div style="display:flex;flex-wrap:wrap;gap:10px">
+<div class="cat-chips" style="display:flex;flex-wrap:wrap;gap:10px">
 <sc-for list="{{ chips }}" as="c" hint-placeholder-count="4">
 <button onClick="{{ c.onJump }}" class="pp-chip" style="display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-size:13.5px;font-weight:600;color:var(--pp-ink);background:{{ c.chipBg }};border:1px solid transparent;border-radius:100px;padding:9px 17px;cursor:pointer" style-hover="filter:brightness(1.05)">{{ c.title }}<span style="font-family:var(--font-mono);font-size:11px;color:var(--pp-muted)">{{ c.count }}</span></button>
 </sc-for>
@@ -183,12 +251,12 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div style="display:flex;flex-direction:column;gap:48px">
 <sc-for list="{{ rails }}" as="r" hint-placeholder-count="4">
 <div id="rail-{{ $index }}" style="scroll-margin-top:80px">
-<div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
-<div style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:#9a978e">{{ r.eyebrow }}</div>
-<h2 style="font-weight:800;font-size:24px;letter-spacing:-0.02em;margin:0">{{ r.title }}</h2>
-<span style="font-family:var(--font-mono);font-size:12px;color:var(--pp-muted)">{{ r.count }}</span>
+<div class="rail-head" style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
+<div class="rail-eyebrow" style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:#9a978e">{{ r.eyebrow }}</div>
+<h2 class="rail-title" style="font-weight:800;font-size:24px;letter-spacing:-0.02em;margin:0">{{ r.title }}</h2>
+<span class="rail-count" style="font-family:var(--font-mono);font-size:12px;color:var(--pp-muted)">{{ r.count }}</span>
 <sc-if value="{{ r.showArrows }}" hint-placeholder-val="{{ false }}">
-<div style="margin-left:auto;display:flex;gap:8px;flex-shrink:0">
+<div class="rail-arrows" style="margin-left:auto;display:flex;gap:8px;flex-shrink:0">
 <button onClick="{{ r.onPrev }}" style="width:38px;height:38px;border-radius:50%;border:1px solid var(--pp-line);background:transparent;color:var(--pp-ink);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:var(--pp-paper)">←</button>
 <button onClick="{{ r.onNext }}" style="width:38px;height:38px;border-radius:50%;border:1px solid var(--pp-line);background:transparent;color:var(--pp-ink);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:var(--pp-paper)">→</button>
 </div>
@@ -197,8 +265,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div id="rail-track-{{ $index }}" class="pp-track" style="display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 40px 14px;margin:0 -40px;align-items:stretch">
 <sc-for list="{{ r.items }}" as="p" hint-placeholder-count="3">
 <div onClick="{{ p.onOpen }}" class="pp-card" style="flex:0 0 260px;scroll-snap-align:start;cursor:pointer;background:{{ p.cardBg }};border:1px solid var(--pp-line);border-radius:14px;display:flex;flex-direction:column;padding:17px">
-<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px">
-<span style="font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.04em;color:var(--pp-muted);text-transform:uppercase">{{ p.cardDesc }}</span>
+<div style="display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-bottom:9px">
 <span style="font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.05em;color:#a3a097;flex-shrink:0">{{ p.year }}</span>
 </div>
 <h3 style="font-weight:800;font-size:15px;line-height:1.22;letter-spacing:-0.02em;color:{{ p.titleColor }};margin:0 0 8px">{{ p.title }}</h3>
@@ -224,7 +291,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 
 <!-- ===================== SINGLE PROJECT ===================== -->
 <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
-<section style="max-width:1080px;margin:0 auto;padding:18px 40px 90px">
+<section class="detail-section" style="max-width:1080px;margin:0 auto;padding:18px 40px 90px">
 
 <button onClick="{{ closeDetail }}" class="pp-chip" style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:13.5px;font-weight:600;padding:9px 16px 9px 12px;border-radius:100px;cursor:pointer;border:1px solid var(--pp-line);background:transparent;color:var(--pp-ink);margin-bottom:28px" style-hover="background:#fff">← All projects</button>
 
@@ -234,17 +301,17 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </div>
 <h1 style="font-weight:800;font-size:clamp(34px,4vw,50px);line-height:1.04;letter-spacing:-0.035em;margin:0 0 18px;max-width:860px;color:var(--pp-ink)">{{ sel.title }}</h1>
 
-<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:start;margin-top:4px">
-<div style="min-width:0">
+<div class="detail-grid" style="display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:start;margin-top:4px">
+<div class="detail-left" style="min-width:0">
 
 <!-- SUMMARY -->
-<div style="background:{{ sel.sumBg }};border-radius:16px;padding:24px 28px;margin:0 0 34px;display:flex;flex-direction:column;gap:10px">
+<div class="detail-summary" style="background:{{ sel.sumBg }};border-radius:16px;padding:24px 28px;margin:0 0 34px;display:flex;flex-direction:column;gap:10px">
 <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:{{ sel.sumLabel }}">Summary</div>
 <p style="font-size:18px;line-height:1.5;font-weight:500;color:var(--pp-ink);margin:0"><sc-for list="{{ sel.headlineSegs }}" as="sg" hint-placeholder-count="1"><sc-if value="{{ sg.b }}" hint-placeholder-val="{{ false }}"><strong style="font-weight:700">{{ sg.t }}</strong></sc-if><sc-if value="{{ sg.notB }}" hint-placeholder-val="{{ true }}">{{ sg.t }}</sc-if></sc-for></p>
 </div>
 
 <!-- Context / Problem + Impact -->
-<div style="max-width:820px;display:flex;flex-direction:column;gap:30px">
+<div class="detail-lead" style="max-width:820px;display:flex;flex-direction:column;gap:30px">
 <sc-for list="{{ sel.leadSections }}" as="s" hint-placeholder-count="2">
 <div>
 <div style="font-weight:700;font-size:13.5px;letter-spacing:0.03em;text-transform:uppercase;color:var(--pp-ink);margin-bottom:12px;display:flex;align-items:center;gap:10px"><span style="width:22px;height:3px;background:var(--pp-chartreuse);border-radius:2px;flex-shrink:0"></span>{{ s.label }}</div>
@@ -269,10 +336,10 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </div>
 </div>
 
-<div style="align-self:stretch">
-<div style="position:sticky;top:24px;display:flex;flex-direction:column;gap:20px">
+<div class="detail-right" style="align-self:stretch">
+<div class="detail-right-inner" style="position:sticky;top:24px;display:flex;flex-direction:column;gap:14px">
 <!-- LOGO -->
-<div style="background:{{ sel.sumBg }};border-radius:14px;padding:20px 22px;display:flex;align-items:center;min-height:92px">
+<div class="detail-logo" style="background:{{ sel.sumBg }};border-radius:14px;padding:14px 20px;display:flex;align-items:center;min-height:64px">
 <sc-if value="{{ sel.hasLogo }}" hint-placeholder-val="{{ false }}">
 {{ sel.logoEl }}
 </sc-if>
@@ -282,43 +349,43 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </div>
 
 <!-- KEY INFO -->
-<div style="background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;padding:22px 22px;display:flex;flex-direction:column;gap:18px">
+<div class="detail-keyinfo" style="background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:13px">
 
-<div style="display:flex;flex-direction:column;gap:7px">
+<div style="display:flex;flex-direction:column;gap:5px">
 <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--pp-muted)">Role</div>
 <div style="font-size:14px;font-weight:600;line-height:1.4;color:var(--pp-ink)">{{ sel.role }}</div>
 </div>
 
-<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;flex-direction:column;gap:6px">
 <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--pp-muted)">Research approach</div>
-<div style="display:flex;flex-wrap:wrap;gap:7px">
+<div style="display:flex;flex-wrap:wrap;gap:5px">
 <sc-for list="{{ sel.methodTags }}" as="t" hint-placeholder-count="4">
-<span style="font-size:12px;font-weight:600;color:var(--pp-ink);background:{{ t.bg }};padding:4px 10px;border-radius:6px;line-height:1.3;white-space:nowrap">{{ t.t }}</span>
+<span style="font-size:10.5px;font-weight:600;color:var(--pp-ink);background:{{ t.bg }};padding:3px 8px;border-radius:6px;line-height:1.3;white-space:nowrap">{{ t.t }}</span>
 </sc-for>
 </div>
 </div>
 
-<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;flex-direction:column;gap:6px">
 <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--pp-muted)">Stakeholders</div>
-<div style="display:flex;flex-wrap:wrap;gap:7px">
+<div style="display:flex;flex-wrap:wrap;gap:5px">
 <sc-for list="{{ sel.stakeholderTags }}" as="t" hint-placeholder-count="4">
-<span style="font-size:12px;font-weight:600;color:var(--pp-ink);background:{{ t.bg }};padding:4px 10px;border-radius:6px;line-height:1.3;white-space:nowrap">{{ t.t }}</span>
+<span style="font-size:10.5px;font-weight:600;color:var(--pp-ink);background:{{ t.bg }};padding:3px 8px;border-radius:6px;line-height:1.3;white-space:nowrap">{{ t.t }}</span>
 </sc-for>
 </div>
 </div>
 
-<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;flex-direction:column;gap:6px">
 <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--pp-muted)">Industry</div>
-<div style="display:flex;flex-wrap:wrap;gap:7px">
+<div style="display:flex;flex-wrap:wrap;gap:5px">
 <sc-for list="{{ sel.industryTags }}" as="t" hint-placeholder-count="1">
-<span style="font-size:12px;font-weight:600;color:var(--pp-ink);background:{{ t.bg }};padding:4px 10px;border-radius:6px;line-height:1.3;white-space:nowrap">{{ t.t }}</span>
+<span style="font-size:10.5px;font-weight:600;color:var(--pp-ink);background:{{ t.bg }};padding:3px 8px;border-radius:6px;line-height:1.3;white-space:nowrap">{{ t.t }}</span>
 </sc-for>
 </div>
 </div>
 
 </div>
 <!-- CONNECT -->
-<div style="background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:11px">
+<div class="detail-connect" style="background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:11px">
 <div style="font-weight:700;font-size:15px;letter-spacing:-0.01em;color:var(--pp-ink);line-height:1.3">Interested in this kind of work?</div>
 <div style="font-size:13px;line-height:1.5;color:var(--pp-muted)">Happy to talk research, strategy and product.</div>
 <a href="https://www.linkedin.com/in/mmmsakharova/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--pp-chartreuse);color:var(--pp-ink);font-size:13.5px;font-weight:700;padding:11px 16px;border-radius:100px;text-decoration:none" style-hover="filter:brightness(1.05)">Connect on LinkedIn →</a>
@@ -380,6 +447,35 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </section>
 </sc-if>
 
+<!-- CONTACT / FOOTER -->
+<section data-screen-label="Contact" style="background:var(--pp-ink);color:#fff;padding:80px 0 0">
+<div class="mw" style="max-width:1200px;margin:0 auto;padding:0 40px">
+<div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:56px;align-items:end;padding-bottom:70px">
+<div>
+<h2 style="font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-0.03em;margin:0 0 28px">Let's work together</h2>
+<div class="cta-row" style="display:flex;gap:14px;flex-wrap:wrap">
+<a href="mailto:mmmsakharova@gmail.com" style="background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:14px 24px;border-radius:100px;text-decoration:none;white-space:nowrap">Email me</a>
+<a href="about.html" style="background:transparent;color:#fff;font-size:15px;font-weight:600;padding:14px 24px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.28);white-space:nowrap" style-hover="border-color:rgba(255,255,255,.55)">More about me →</a>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Email</div><div style="font-size:15px;font-weight:600">mmmsakharova@gmail.com</div></div>
+<div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Based in</div><div style="font-size:15px;font-weight:600">London, UK · Global Talent Visa</div></div>
+</div>
+</div>
+<div class="footer-bar" style="border-top:1px solid rgba(255,255,255,.14);padding:26px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+<span style="font-weight:700;font-size:14px">Maria Sakharova · Staff Product Researcher</span>
+<div class="footer-nav" style="display:flex;gap:22px;align-items:center">
+<a href="work.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Work</a>
+<a href="about.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">About</a>
+<a href="services.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Services</a>
+<a href="mentorship.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Mentorship</a>
+<span style="font-size:12.5px;color:#9b9991">© 2026</span>
+</div>
+</div>
+</div>
+</section>
+
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
@@ -426,7 +522,7 @@ class Component extends DCLogic {
         headline: "Led **Wise's first large-scale mixed-method study** of how customers manage money across all financial providers. Combined behavioural data, qualitative research and **AI-assisted analysis** to redefine the **Wise Account strategy** and align product direction across multiple teams.",
         cardBody: "Led Wise's **first large-scale mixed-method study** to uncover how users manage money across providers — revealing opportunities to expand beyond transfers into everyday financial use.",
         outcomes: "Partnered with **C-level stakeholders** to shape the **2-year Wise Account strategy**. Insights from **5,000+ users** aligned 7+ teams and **drove growth** across features for saving, spending, and growing money.",
-        cardTags: ['Mixed Methods', 'Large-scale Survey', 'Behavioural Analysis', 'AI-assisted Analysis'],
+        cardTags: ['Mixed Methods', 'Large-scale Survey', 'AI-assisted Analysis'],
         role: 'Squad Lead & UX Researcher, Account', timeline: '5 months',
         stakeholders: 'CPO, VP Design, Research Director, Engineering Lead, Product Leads, Data Leads',
         methods: ['Mixed Methods', 'Behavioural Modelling', 'AI-Driven Analysis', 'Large-scale Survey', 'In-depth Interviews'],
@@ -458,7 +554,7 @@ class Component extends DCLogic {
         headline: 'Led **early-stage research into how people build trust** in AI-assisted and autonomous checkout. Combined concept testing, in-depth interviews and cross-market research to uncover users\u2019 mental models and define a **trust model for agentic commerce**.',
         cardBody: 'Led **early-stage concept tests (UK & US)** into how people come to trust **AI-assisted and autonomous checkout** — where no established behaviours or design conventions yet exist, and the brand itself at stake.',
         outcomes: "Identified where **reassurance, transparency and user control** matter most across the journey, and translated the findings into **journey-wide product recommendations** for future checkout experiences.",
-        cardTags: ['Concept Testing', 'Prototype Testing', 'In-depth Interviews', 'UK & US Markets'],
+        cardTags: ['Early Concept Testing', 'UK & US Markets'],
         role: 'Senior UX Researcher', timeline: '2 months',
         stakeholders: 'Research Lead, VP Design, Lead Designer',
         methods: ['In-depth Interviews', 'Concept Testing', 'Prototype Testing', 'Cross-market Research'],
@@ -489,7 +585,7 @@ class Component extends DCLogic {
         headline: 'Redefined how Flagstone thinks about advisers. Combined **previous insights, behavioural interviews, competitive benchmarking and opportunity scoring** to develop a **new strategic model** and a **prioritised roadmap for the year ahead**.',
         cardBody: 'Led a **foundational discovery** into adviser growth — synthesising previous research, benchmarking competitors, interviewing advisers across the full engagement spectrum, and segmenting the base through quant research.',
         outcomes: 'A **prioritised opportunity backlog** for the year ahead and a **new adviser segmentation** adopted across product, partnerships, marketing and design. Findings were presented at **C-level, including the CEO**.',
-        cardTags: ['Research Synthesis', 'In-depth Interviews', 'Competitive Benchmarking', 'Opportunity Scoring', 'RICE'],
+        cardTags: ['In-depth Interviews', 'Competitive Benchmarking', 'Opportunity Scoring', 'RICE'],
         role: 'First UX Researcher for the Squad', timeline: 'Q2 2026 → ongoing',
         stakeholders: 'Product, Design, Marketing, Partnerships, Engineering, C-suite, Copywriters, BDMs',
         methods: ['In-depth Interviews', 'Research Synthesis', 'Competitive Benchmarking', 'Opportunity Scoring', 'AI-assisted Analysis'],
@@ -520,7 +616,7 @@ class Component extends DCLogic {
         headline: `Turned a homepage evaluation into a **strategic discovery of how AI teams actually work**. Combined moderated research and AI-moderated evaluation to define a **work-first product direction** and elevate platform foundations for future development.`,
         cardBody: `Iterative research combining **human and AI moderation** to uncover how creative teams across **8 agencies and 4 regions** adopt AI in their daily workflows.`,
         outcomes: 'Reset the homepage strategy from choosing a single direction to a **composable, work-first experience**. Delivered an immediate **fix list**, identified **platform foundations blocking adoption**, and informed the next design cycle.',
-        cardTags: ['Moderated Usability Testing', 'AI-moderated Research', 'Concept Evaluation', 'Workflow Interviews'],
+        cardTags: ['Moderated Usability Testing', 'AI-moderated Research', 'Evaluative Iterations'],
         role: 'UX Researcher (contract)', timeline: '2 months',
         stakeholders: 'Product, Design, Engineering, Analyst',
         methods: ['Moderated U-testing', 'AI-moderated Research', 'Concept Evaluation', 'Workflow Interviews'],
@@ -585,7 +681,7 @@ class Component extends DCLogic {
         headline: 'Changed the direction of a **core navigation redesign** by combining behavioural research, analytics and usability testing, contributing **£XXXM in incremental annual cross-currency volume**.',
         cardBody: "Combined **funnel analysis, competitor benchmarking and usability testing** to identify friction across top-up, send and request flows, improving the experience of **Wise's core money actions**.",
         outcomes: 'Informed improvements to **key Account Actions**, contributing **£XXXM in incremental annual volume** and increasing comprehension, engagement, first clicks and completed actions.',
-        cardTags: ['Funnel Analysis', 'Iterative Usability Testing', 'Benchmarking', 'Tree Testing', 'IA'],
+        cardTags: ['Funnel Analysis', 'IA', 'Iterative Usability Testing', 'Benchmarking', 'Tree Testing'],
         role: 'Researcher, Account Squad', timeline: '',
         stakeholders: 'PMs, Design Director, Engineering, Analyst',
         methods: ['Iterative U-testing', 'Benchmarking', 'Card Sorting & Tree Testing', 'Funnel Analysis'],
@@ -749,7 +845,7 @@ class Component extends DCLogic {
         headline: `Challenged the team's assumptions about investor behaviour, identifying **which non-monetary growth mechanics influence investment decisions** and **when they are most effective**.`,
         cardBody: "Led behavioural research into how **retail investors make decisions**, combining **16 interviews** with embedded concept testing to identify the product mechanics that drive engagement.",
         outcomes: 'Defined a **behavioural model to build against**: **four investor profiles**, a **four-stage decision journey**, and prioritised product mechanics grounded in concept evidence.',
-        cardTags: ['Behavioural Research', 'Product Strategy', 'Concept Testing', 'Growth Research'],
+        cardTags: ['Behavioural Research', 'Product Strategy', 'Growth Research'],
         role: 'Lead Researcher (contract, pitched via proposal)', timeline: 'Feb–Mar 2026',
         stakeholders: 'Investments Product Team',
         methods: ['Depth Interviews (n=16)', 'Embedded Concept Testing', 'Behavioural Profiling', 'Hypothesis-driven Research'],

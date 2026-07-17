@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230A0A0A'/><circle cx='50' cy='50' r='30' fill='%23F4C3AB'/></svg>">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <title>Mentorship & Training — Maria Sakharova</title>
 <meta name="description" content="Practical mentorship and training for PMs, designers and researchers. Top-10 mentor on ADPList.">
 <link rel="canonical" href="https://researchpartner.uk/mentorship.html">
@@ -11,7 +12,13 @@
 <meta property="og:title" content="Mentorship & Training — Maria Sakharova">
 <meta property="og:description" content="Practical mentorship and training for PMs, designers and researchers. Top-10 mentor on ADPList.">
 <meta property="og:url" content="https://researchpartner.uk/mentorship.html">
-<meta property="og:image" content="https://researchpartner.uk/uploads/IMG_7083.jpg">
+<meta property="og:image" content="https://researchpartner.uk/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Maria Sakharova — UX Research & Digital Strategy">
+<meta property="og:site_name" content="Maria Sakharova">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:image" content="https://researchpartner.uk/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,7 +129,8 @@
     nav{padding-left:16px!important;padding-right:16px!important}
     .nav-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:1px solid var(--pp-line);border-radius:10px;background:transparent;color:var(--pp-ink);font-size:20px;line-height:1;cursor:pointer}
     nav .nav-links{position:absolute;top:100%;left:0;right:0;display:none!important;flex-direction:column;align-items:stretch;gap:2px!important;background:#E8E8EC;border-bottom:1px solid var(--pp-line);padding:12px 18px 18px}
-    nav .nav-links>a{padding:13px 4px;font-size:16px!important;opacity:1!important}
+    nav .nav-links>a{padding:13px 4px;font-size:16px!important;opacity:1!important;font-weight:600!important}
+    nav .nav-links>a:last-child{display:none!important}
     #navtoggle:checked~.nav-links{display:flex!important}
     .pageRoot{padding-top:64px!important}
   }
@@ -136,6 +144,59 @@ if(document.fonts&&document.fonts.load){
 setTimeout(go,2800);
 window.addEventListener('load',function(){setTimeout(function(){['index.html','work.html','about.html','services.html','mentorship.html'].forEach(function(h){if(decodeURIComponent(location.pathname).indexOf(h)>-1)return;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l);});},300);});})();
 </script>
+<style>
+  .swipe-hint{display:none}
+  .about-photo-m{display:none}
+@media (max-width:860px){
+  .detail-grid{display:flex!important;flex-direction:column!important;gap:24px!important}
+  .detail-left,.detail-right,.detail-right-inner{display:contents!important}
+  .detail-summary{order:1!important;margin:0!important}
+  .detail-keyinfo{order:2!important}
+  .detail-lead{order:3!important}
+  .detail-logo,.detail-connect{display:none!important}
+}
+@media (max-width:640px){
+  .pageRoot h1{font-size:30px!important;line-height:1.08!important;letter-spacing:-0.02em!important}
+  .pageRoot h2{font-size:23px!important;line-height:1.16!important;letter-spacing:-0.01em!important}
+  .pageRoot h3{font-size:15.5px!important}
+  .pageRoot p{font-size:15px!important;line-height:1.6!important}
+  .about-title{font-size:29px!important;line-height:1.08!important;margin-bottom:20px!important}
+  .about-story p{font-size:15.5px!important;line-height:1.62!important}
+  .mw{padding-left:22px!important;padding-right:22px!important}
+  .pageRoot>section{padding-top:46px!important;padding-bottom:46px!important}
+
+  section[data-screen-label="Hero"]{min-height:auto!important;padding-top:70px!important;padding-bottom:0!important}
+  .hero-inner{padding:8px 0 22px!important}
+  .hero-wrap{grid-template-columns:1fr!important;gap:2px!important;padding-left:22px!important;padding-right:22px!important}
+  .hero-portrait{order:0!important;min-height:250px!important;transform:none!important;margin:0 auto!important}
+  .hero-portrait>div{width:330px!important;height:312px!important;right:auto!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important}
+  .hero-portrait img{width:174px!important;height:174px!important}
+  .hero-portrait + div{order:1!important}
+  .hero-h1{font-size:33px!important;line-height:1.04!important;margin-bottom:14px!important}
+  .hero-sub{font-size:15px!important;line-height:1.55!important;margin-bottom:22px!important}
+  .hero-sub br{display:none!important}
+  .hero-ctas,.cta-row{flex-direction:column!important;align-items:stretch!important}
+  .hero-ctas>a,.cta-row>a{justify-content:center!important;width:100%!important;text-align:center!important}
+  .trusted-wrap{padding-bottom:30px!important}
+  .trusted-label{padding-bottom:26px!important}
+  #work-track>a.pp-card{flex:0 0 86%!important}
+
+  .footer-bar{flex-direction:column!important;align-items:flex-start!important;gap:16px!important}
+  .footer-nav{flex-wrap:wrap!important;gap:14px 18px!important}
+
+  .kw-desktop,.rev-desktop{display:none!important}
+  .kw-mobile,.rev-mobile{display:flex!important;gap:14px!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 -22px 0 0!important;padding:2px 0 14px 0!important}
+  .kw-mobile::-webkit-scrollbar,.rev-mobile::-webkit-scrollbar{display:none}
+  .kw-panel,.rev-panel{flex:0 0 84%!important;scroll-snap-align:start;display:flex;flex-direction:column;gap:20px}
+  .swipe-hint{display:inline-flex!important}
+
+  .about-photo-m{display:block!important}
+  .about-photos-side{display:none!important}
+
+  .cat-chips{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+  .cat-chips>button{justify-content:space-between!important;padding-left:14px!important;padding-right:14px!important}
+}
+</style>
 </helmet>
 
 <div class="pageRoot" style="background:#F1F0EB;font-family:var(--font-display);color:var(--pp-ink);min-height:100vh;overflow-x:clip;padding-top:70px">
@@ -202,7 +263,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </div>
 </sc-for>
 </div>
-<p style="margin:26px 0 0;font-size:15px;line-height:1.6;color:#6b6a64;max-width:680px"><b>Pricing</b> <b>depends</b> on the<strong> kind of support </strong>you're looking for&nbsp;and your <b>individual circumstances</b>. I also keep a few free mentoring spots available to help make mentorship more accessible. <a href="https://www.linkedin.com/in/mmmsakharova/" target="_blank" rel="noopener" style="color: var(--pp-ink); text-decoration: none; border-bottom: 2px solid var(--pp-chartreuse); padding-bottom: 2px;">Get in touch</a>.</p>
+<p style="margin:26px 0 0;font-size:15px;line-height:1.6;color:#6b6a64;max-width:860px"><b>Pricing</b> <b>depends</b> on the<strong> kind of support </strong>you're looking for&nbsp;and your <b>individual circumstances</b>.<br>I also keep a few free mentoring spots available to help make mentorship more accessible. <a href="https://www.linkedin.com/in/mmmsakharova/" target="_blank" rel="noopener" style="color: var(--pp-ink); text-decoration: none; border-bottom: 2px solid var(--pp-chartreuse); padding-bottom: 2px;">Get in touch</a>.</p>
 </section>
 
 <!-- reviews -->
@@ -211,11 +272,24 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#4a527a;margin-bottom:14px">After our sessions</div>
 <h2 style="font-weight:800;font-size:clamp(28px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;margin:0 0 14px;color:var(--pp-ink)">Reflections from recent mentees</h2>
 <p style="font-size:16px;line-height:1.55;color:#3a3a52;font-weight:500;margin:0 0 34px;max-width:620px">I've been lucky to meet researchers, designers and product people from many countries and backgrounds.&nbsp;</p>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px 32px;align-items:start">
+<div class="swipe-hint" style="display:none;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--pp-muted);margin-bottom:16px">Swipe for more <span style="font-size:13px">→</span></div>
+<div class="rev-rail rev-desktop" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px 32px;align-items:start">
 <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="8">
-<div style="margin:0;border-left:3px solid {{ r.accent }};padding:2px 0 2px 18px">
+<div class="rev-card" style="margin:0;border-left:3px solid {{ r.accent }};padding:2px 0 2px 18px">
 <p style="margin:0;font-size:14.5px;line-height:1.55;color:var(--pp-ink);font-weight:500" dangerouslySetInnerHTML="{{ r.html }}"></p>
 <div style="margin-top:11px;font-size:12px;color:#4a527a;font-weight:700">{{ r.name }} · {{ r.role }}</div>
+</div>
+</sc-for>
+</div>
+<div class="rev-mobile" style="display:none">
+<sc-for list="{{ reviewCols }}" as="col" hint-placeholder-count="4">
+<div class="rev-panel">
+<sc-for list="{{ col }}" as="r" hint-placeholder-count="3">
+<div style="border-left:3px solid {{ r.accent }};padding:2px 0 2px 16px">
+<p style="margin:0;font-size:14.5px;line-height:1.55;color:var(--pp-ink);font-weight:500" dangerouslySetInnerHTML="{{ r.html }}"></p>
+<div style="margin-top:10px;font-size:12px;color:#4a527a;font-weight:700">{{ r.name }} · {{ r.role }}</div>
+</div>
+</sc-for>
 </div>
 </sc-for>
 </div>
@@ -244,7 +318,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div>
 <h2 style="font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-0.03em;margin:0 0 20px">Let's talk</h2>
 <p style="font-size:17px;line-height:1.55;color:#c9c8c1;margin:0 0 28px;max-width:460px">If you have a project, a question, or simply want another perspective, feel free to reach out.</p>
-<div style="display:flex;gap:14px;flex-wrap:wrap">
+<div class="cta-row" style="display:flex;gap:14px;flex-wrap:wrap">
 <a href="#" onClick="{{ copyEmail }}" style="background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:14px 24px;border-radius:100px;text-decoration:none">Book a session</a>
 <a href="https://www.linkedin.com/in/mmmsakharova/" target="_blank" rel="noopener" style="background:transparent;color:#fff;font-size:15px;font-weight:600;padding:14px 24px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.28)" style-hover="border-color:rgba(255,255,255,.55)">Connect on LinkedIn</a>
 </div>
@@ -254,9 +328,9 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Based in</div><div style="font-size:15px;font-weight:600">London, UK · Global Talent Visa</div></div>
 </div>
 </div>
-<div style="border-top:1px solid rgba(255,255,255,.14);padding:26px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+<div class="footer-bar" style="border-top:1px solid rgba(255,255,255,.14);padding:26px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
 <span style="font-weight:700;font-size:14px">Maria Sakharova · Staff Product Researcher</span>
-<div style="display:flex;gap:22px;align-items:center">
+<div class="footer-nav" style="display:flex;gap:22px;align-items:center">
 <a href="work.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Work</a>
 <a href="about.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">About</a>
 <a href="services.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Services</a>
@@ -328,7 +402,8 @@ class Component extends DCLogic {
     ];
     const accents = ['var(--pp-chartreuse)', 'var(--pp-peach)', 'var(--pp-khaki)'];
     const reviews = rev.map(function (r, i) { return Object.assign({}, r, { accent: accents[(i + Math.floor(i / 3)) % 3], html: { __html: '“' + r.text + '”' } }); });
-    return { stats, offers, reviews, copyEmail, toastStyle };
+    var reviewCols = []; for (var ri = 0; ri < reviews.length; ri += 3) reviewCols.push(reviews.slice(ri, ri + 3));
+    return { stats, offers, reviews, reviewCols, copyEmail, toastStyle };
   }
 }
 </script>
