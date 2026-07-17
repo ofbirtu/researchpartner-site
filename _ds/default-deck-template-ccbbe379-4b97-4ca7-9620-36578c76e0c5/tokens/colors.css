@@ -1,0 +1,35 @@
+/* Paper Pieces — colour. NO pure white exists in this palette. */
+:root {
+  /* Core neutrals */
+  --pp-ink: #0A0A0A;          /* primary text + dark ground */
+  --pp-paper: #E8E8EC;        /* cards / surfaces (the only "light") */
+  --pp-line: #DCDAD2;         /* borders + the neutral "paper" slide ground */
+  --pp-muted: #7E7C74;        /* secondary / caption text */
+
+  /* Accents — used as slide grounds AND as paper pieces */
+  --pp-chartreuse: #CFD64B;   /* primary accent / highlight / chart lead */
+  --pp-khaki: #A2926A;
+  --pp-peri: #C2CBE9;         /* periwinkle */
+  --pp-peach: #F4C3AB;
+
+  /* Chartreuse highlight / heat ramp (matrix cells, glows) */
+  --pp-hm-1: rgba(207,214,75,0.16);
+  --pp-hm-2: rgba(207,214,75,0.36);
+  --pp-hm-3: rgba(207,214,75,0.56);
+  --pp-hm-4: rgba(207,214,75,0.79);
+  --pp-hm-5: rgba(207,214,75,1);
+
+  /* ---- Semantic aliases ---- */
+  --text-body: var(--pp-ink);
+  --text-muted: var(--pp-muted);
+  --text-on-dark: #FFFFFF;          /* white text is ONLY allowed on the dark ground */
+  --surface-card: var(--pp-paper);
+  --surface-card-dark: var(--pp-ink);
+  --border-line: var(--pp-line);
+  --accent-primary: var(--pp-chartreuse);
+
+  /* Grounds */
+  --ground-neutral: var(--pp-line);  /* greige "paper" slide */
+  --ground-dark: var(--pp-ink);
+  --ground-dark-glow: radial-gradient(ellipse 110% 70% at 50% 132%, rgba(207,214,75,0.55) 0%, rgba(207,214,75,0.16) 27%, rgba(207,214,75,0) 56%), #0A0A0A;
+}

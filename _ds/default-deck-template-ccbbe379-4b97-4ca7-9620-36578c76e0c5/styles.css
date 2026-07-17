@@ -1,0 +1,5 @@
+/* Paper Pieces — design system entry point. Designs receive this @import closure. */
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/forms.css";
