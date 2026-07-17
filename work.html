@@ -265,7 +265,8 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div id="rail-track-{{ $index }}" class="pp-track" style="display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 40px 14px;margin:0 -40px;align-items:stretch">
 <sc-for list="{{ r.items }}" as="p" hint-placeholder-count="3">
 <div onClick="{{ p.onOpen }}" class="pp-card" style="flex:0 0 260px;scroll-snap-align:start;cursor:pointer;background:{{ p.cardBg }};border:1px solid var(--pp-line);border-radius:14px;display:flex;flex-direction:column;padding:17px">
-<div style="display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-bottom:9px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px">
+<span style="font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.04em;color:var(--pp-muted);text-transform:uppercase">{{ p.cardDesc }}</span>
 <span style="font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.05em;color:#a3a097;flex-shrink:0">{{ p.year }}</span>
 </div>
 <h3 style="font-weight:800;font-size:15px;line-height:1.22;letter-spacing:-0.02em;color:{{ p.titleColor }};margin:0 0 8px">{{ p.title }}</h3>
