@@ -205,7 +205,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
   .rail-count{order:3!important}
   .rail-arrows{order:4!important}
   .cat-section,.detail-section{padding-left:22px!important;padding-right:22px!important}
-  .pageRoot [id^="rail-track-"]{margin:0!important;padding:4px 0 14px 0!important;scroll-padding-left:0!important}
+  .pageRoot [id^="rail-track-"]{margin:0!important;padding:4px 0 14px 0!important;scroll-padding-left:0!important;scroll-snap-type:x proximity!important}
   .cat-chips{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
   .cat-chips>button{justify-content:space-between!important;padding-left:14px!important;padding-right:14px!important}
 }
@@ -455,7 +455,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div>
 <h2 style="font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-0.03em;margin:0 0 28px">Let's work together</h2>
 <div class="cta-row" style="display:flex;gap:14px;flex-wrap:wrap">
-<a href="mailto:mmmsakharova@gmail.com" style="background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:14px 24px;border-radius:100px;text-decoration:none;white-space:nowrap">Email me</a>
+<a href="#" onClick="{{ copyEmail }}" style="background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:14px 24px;border-radius:100px;text-decoration:none;white-space:nowrap">Email me</a>
 <a href="about.html" style="background:transparent;color:#fff;font-size:15px;font-weight:600;padding:14px 24px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.28);white-space:nowrap" style-hover="border-color:rgba(255,255,255,.55)">More about me →</a>
 </div>
 </div>
@@ -477,6 +477,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </div>
 </section>
 
+<div style="{{ toastStyle }}"><span style="width:18px;height:18px;border-radius:50%;background:var(--pp-chartreuse);color:var(--pp-ink);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Maria's email copied to clipboard</div>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
@@ -503,15 +504,38 @@ class Component extends DCLogic {
       } catch (e) {}
     };
     setTimeout(this._checkArrows, 350);
-    if (typeof window !== 'undefined') window.addEventListener('resize', this._checkArrows);
+    this._bindRailArrows = () => {
+      try {
+        var i = 0, el;
+        while ((el = document.getElementById('rail-track-' + i))) {
+          (function (track) {
+            var head = track.previousElementSibling;
+            var arrows = head && head.querySelector ? head.querySelector('.rail-arrows') : null;
+            var sync = function () {
+              if (!arrows) return;
+              var b = arrows.querySelectorAll('button'), p = b[0], n = b[1];
+              var s = track.scrollLeft <= 2, e2 = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+              if (p) { p.style.opacity = s ? '0.35' : ''; p.style.pointerEvents = s ? 'none' : ''; }
+              if (n) { n.style.opacity = e2 ? '0.35' : ''; n.style.pointerEvents = e2 ? 'none' : ''; }
+            };
+            if (!track._arrowSync) { track._arrowSync = sync; track.addEventListener('scroll', sync, { passive: true }); }
+            sync();
+          })(el);
+          i++;
+        }
+      } catch (e) {}
+    };
+    setTimeout(this._bindRailArrows, 400); setTimeout(this._bindRailArrows, 900);
+    if (typeof window !== 'undefined') { window.addEventListener('resize', this._checkArrows); window.addEventListener('resize', this._bindRailArrows); }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.view !== this.state.view && this.state.view === 'catalogue' && this._checkArrows) setTimeout(this._checkArrows, 120);
+    if (this._bindRailArrows) setTimeout(this._bindRailArrows, 80);
   }
 
   componentWillUnmount() {
-    if (typeof window !== 'undefined' && this._checkArrows) window.removeEventListener('resize', this._checkArrows);
+    if (typeof window !== 'undefined' && this._checkArrows) { window.removeEventListener('resize', this._checkArrows); if (this._bindRailArrows) window.removeEventListener('resize', this._bindRailArrows); }
   }
 
   data() {
@@ -813,7 +837,7 @@ class Component extends DCLogic {
         headline: 'Defined the **launch offer, pricing strategy and demand model** for an AI tutor — and built a **reusable analysis framework** for future pricing decisions.',
         cardBody: 'Led two iterations of **Gabor-Granger pricing and concept research**, designing a between-groups experiment and building a **Claude Code × Python analysis pipeline** to support launch decisions.',
         outcomes: 'Defined the **launch offer and monetisation strategy** — identifying the leading concept, establishing the price corridor, quantifying demand–revenue trade-offs, and delivering a **rerunnable Python analysis pipeline** the team continued using.',
-        cardTags: ['Gabor-Granger Pricing', 'Inferential Statistics', 'Claude Code', 'Pricing Research'],
+        cardTags: ['Gabor-Granger', 'Inferential Statistics', 'Claude Code', 'Pricing Research'],
         role: 'Quant Researcher (contract)', timeline: '2026, two iterations',
         stakeholders: 'Product, Monetisation',
         methods: ['Gabor-Granger Pricing', 'Between-groups Concept Experiment (n≈800)', 'Inferential Statistics', 'AI-assisted Python Pipeline'],
@@ -1088,10 +1112,28 @@ class Component extends DCLogic {
     const prevIdx = (sIdx - 1 + total) % total;
     const nextIdx = (sIdx + 1) % total;
 
+    const copyEmail = (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      const email = 'mmmsakharova@gmail.com';
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = email; ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+        document.body.appendChild(ta); ta.focus(); ta.select(); ta.setSelectionRange(0, email.length);
+        document.execCommand('copy'); document.body.removeChild(ta);
+      } catch (_) {}
+      if (navigator.clipboard && navigator.clipboard.writeText) { try { navigator.clipboard.writeText(email).catch(() => {}); } catch (_) {} }
+      this.setState({ copied: true });
+      clearTimeout(this._t); this._t = setTimeout(() => this.setState({ copied: false }), 2400);
+    };
+    const on = !!(this.state && this.state.copied);
+    const toastStyle = { position: 'fixed', left: '50%', bottom: '34px', transform: on ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(18px)', background: 'var(--pp-ink)', color: '#fff', padding: '13px 22px', borderRadius: '100px', fontSize: '14px', fontWeight: 600, boxShadow: '0 8px 30px rgba(0,0,0,.28)', opacity: on ? 1 : 0, pointerEvents: 'none', transition: 'opacity .28s ease, transform .28s ease', zIndex: 9999, display: 'flex', alignItems: 'center', gap: '9px' };
+
     return {
       isCatalogue: st.view === 'catalogue',
       isDetail: st.view === 'detail',
       total, rails, chips,
+      copyEmail, toastStyle,
       sel,
       prevTitle: all[prevIdx].title,
       nextTitle: all[nextIdx].title,
