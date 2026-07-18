@@ -477,7 +477,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </div>
 </section>
 
-<div style="{{ toastStyle }}"><span style="width:18px;height:18px;border-radius:50%;background:var(--pp-chartreuse);color:var(--pp-ink);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Maria's email copied to clipboard</div>
+<div style="{{ toastStyle }}"><span style="width:18px;height:18px;border-radius:50%;background:var(--pp-chartreuse);color:var(--pp-ink);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0">✓</span>Maria's email copied to clipboard</div>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
@@ -1092,7 +1092,7 @@ class Component extends DCLogic {
       { eyebrow: 'Contract · 2025–26', title: 'AI-native & 0→1 research', match: (p) => p.group === 'ai-native' },
       { eyebrow: 'Contract · 2025–26', title: 'Behavioural & quant research', match: (p) => p.group === 'behav-quant' },
     ];
-    const railScroll = (di, dir) => { const el = typeof document !== 'undefined' && document.getElementById('rail-track-' + di); if (el) el.scrollBy({ left: dir * 320, behavior: 'smooth' }); };
+    const railScroll = (di, dir) => { const el = typeof document !== 'undefined' && document.getElementById('rail-track-' + di); if (!el) return; const max = el.scrollWidth - el.clientWidth; let x = el.scrollLeft + dir * 320; if (x >= max - 60) x = max; if (x <= 60) x = 0; x = Math.max(0, Math.min(max, x)); el.scrollTo({ left: x, behavior: 'smooth' }); };
     const rails = defs
       .map((d, di) => { const items = cards.filter(d.match).map((it, j) => ({ ...it, cardBg: (di + j) % 2 === 0 ? '#fff' : 'var(--pp-paper)', lineColor: ['var(--pp-chartreuse)', 'var(--pp-peach)', 'var(--pp-khaki)'][j % 3] })); return { eyebrow: d.eyebrow, title: d.title, count: items.length, items, showArrows: (this.state.railOverflow || {})[di] === true, onPrev: () => railScroll(di, -1), onNext: () => railScroll(di, 1) }; })
       .filter((r) => r.items.length > 0);

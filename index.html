@@ -183,7 +183,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
   .mw{padding-left:22px!important;padding-right:22px!important}
   .pageRoot>section{padding-top:46px!important;padding-bottom:46px!important}
 
-  section[data-screen-label="Hero"]{min-height:100svh!important;padding-top:60px!important;padding-bottom:0!important;justify-content:space-between!important}
+  section[data-screen-label="Hero"]{min-height:100dvh!important;padding-top:60px!important;padding-bottom:0!important;justify-content:space-between!important}
   .hero-inner{flex:1 1 auto!important;min-height:0!important;align-items:center!important;padding:2px 0 8px!important}
   .hero-wrap{grid-template-columns:1fr!important;gap:0!important;padding-left:22px!important;padding-right:22px!important}
   .hero-portrait{order:0!important;min-height:206px!important;transform:none!important;margin:0 auto 20px!important}
@@ -540,7 +540,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </section>
 
 <!-- email-copied toast -->
-<div style="{{ toastStyle }}"><span style="width:18px;height:18px;border-radius:50%;background:var(--pp-chartreuse);color:var(--pp-ink);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Maria's email copied to clipboard</div>
+<div style="{{ toastStyle }}"><span style="width:18px;height:18px;border-radius:50%;background:var(--pp-chartreuse);color:var(--pp-ink);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0">✓</span>Maria's email copied to clipboard</div>
 
 </div>
 </x-dc>
@@ -593,8 +593,9 @@ class Component extends DCLogic {
     quotes.forEach(function (q, i) { q.accent = accents[i % 3]; q.node = fmt(q.text); });
 
     const track = () => document.getElementById('work-track');
-    const scrollNext = () => { const t = track(); if (t) t.scrollBy({ left: 340, behavior: 'smooth' }); };
-    const scrollPrev = () => { const t = track(); if (t) t.scrollBy({ left: -340, behavior: 'smooth' }); };
+    const goTrack = (dir) => { const t = track(); if (!t) return; const max = t.scrollWidth - t.clientWidth; let x = t.scrollLeft + dir * 340; if (x >= max - 60) x = max; if (x <= 60) x = 0; x = Math.max(0, Math.min(max, x)); t.scrollTo({ left: x, behavior: 'smooth' }); };
+    const scrollNext = () => goTrack(1);
+    const scrollPrev = () => goTrack(-1);
 
     const copyEmail = (e) => {
       if (e && e.preventDefault) e.preventDefault();
