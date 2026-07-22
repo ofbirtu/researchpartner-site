@@ -7,11 +7,11 @@
 <link rel="apple-touch-icon" href="favicon.png">
 <title>Selected Work — Maria Sakharova</title>
 <meta name="description" content="Case studies in UX research and product strategy across fintech, AI and edtech — Wise, Mastercard, Flagstone, WPP Open and more.">
-<link rel="canonical" href="https://researchpartner.uk/work.html">
+<link rel="canonical" href="https://researchpartner.uk/work">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Selected Work — Maria Sakharova">
 <meta property="og:description" content="Case studies in UX research and product strategy across fintech, AI and edtech — Wise, Mastercard, Flagstone, WPP Open and more.">
-<meta property="og:url" content="https://researchpartner.uk/work.html">
+<meta property="og:url" content="https://researchpartner.uk/work">
 <meta property="og:image" content="https://researchpartner.uk/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -148,7 +148,7 @@ if(document.fonts&&document.fonts.load){
     .then(function(){return document.fonts.ready;}).then(go).catch(go);
 }else{go();}
 setTimeout(go,2800);
-window.addEventListener('load',function(){setTimeout(function(){['index.html','work.html','about.html','services.html','mentorship.html'].forEach(function(h){if(decodeURIComponent(location.pathname).indexOf(h)>-1)return;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l);});},300);});})();
+window.addEventListener('load',function(){setTimeout(function(){['/','/work','/about','/services','/mentorship'].forEach(function(h){if(decodeURIComponent(location.pathname).indexOf(h)>-1)return;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l);});},300);});})();
 </script>
 <style>
   .swipe-hint{display:none}
@@ -217,17 +217,17 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <!-- fixed nav -->
 <div style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(232,232,236,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--pp-line)">
 <nav style="max-width:1200px;margin:0 auto;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-<a href="index.html" style="display:flex;flex-direction:column;line-height:1.15;text-decoration:none">
+<a href="/" style="display:flex;flex-direction:column;line-height:1.15;text-decoration:none">
 <span style="font-weight:700;font-size:17px;letter-spacing:-0.01em">Maria Sakharova</span>
 <span style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.06em;color:#5d6178;text-transform:uppercase;margin-top:2px">UX Research · Digital Strategy</span>
 </a>
 <input type="checkbox" id="navtoggle" hidden>
 <label for="navtoggle" class="nav-burger" aria-label="Toggle menu">☰</label>
 <div class="nav-links" style="display:flex;align-items:center;gap:28px">
-<a href="work.html" style="font-size:14.5px;font-weight:700;text-decoration:none">Work</a>
-<a href="about.html" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">About</a>
-<a href="services.html" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">Services</a>
-<a href="mentorship.html" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">Mentorship</a>
+<a href="/work" style="font-size:14.5px;font-weight:700;text-decoration:none">Work</a>
+<a href="/about" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">About</a>
+<a href="/services" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">Services</a>
+<a href="/mentorship" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">Mentorship</a>
 <a href="https://www.linkedin.com/in/mmmsakharova/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:7px;background:var(--pp-ink);color:#fff;font-size:14px;font-weight:600;padding:10px 18px;border-radius:100px;text-decoration:none" style-hover="background:#262626">Let's talk</a>
 </div>
 </nav>
@@ -455,22 +455,22 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div>
 <h2 style="font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-0.03em;margin:0 0 28px">Let's work together</h2>
 <div class="cta-row" style="display:flex;gap:14px;flex-wrap:wrap">
-<a href="#" onClick="{{ copyEmail }}" style="background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:14px 24px;border-radius:100px;text-decoration:none;white-space:nowrap">Email me</a>
-<a href="about.html" style="background:transparent;color:#fff;font-size:15px;font-weight:600;padding:14px 24px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.28);white-space:nowrap" style-hover="border-color:rgba(255,255,255,.55)">More about me →</a>
+<a href="mailto:mmmsakharova@gmail.com" style="background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:14px 24px;border-radius:100px;text-decoration:none;white-space:nowrap">Email me</a>
+<a href="/about" style="background:transparent;color:#fff;font-size:15px;font-weight:600;padding:14px 24px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.28);white-space:nowrap" style-hover="border-color:rgba(255,255,255,.55)">More about me →</a>
 </div>
 </div>
 <div style="display:flex;flex-direction:column;gap:20px">
-<div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Email</div><div style="font-size:15px;font-weight:600">mmmsakharova@gmail.com</div></div>
+<div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Email</div><div style="font-size:15px;font-weight:600"><a href="mailto:mmmsakharova@gmail.com" style="color:#fff;text-decoration:none;border-bottom:1px solid var(--pp-chartreuse);padding-bottom:1px">mmmsakharova@gmail.com</a></div></div>
 <div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Based in</div><div style="font-size:15px;font-weight:600">London, UK · Global Talent Visa</div></div>
 </div>
 </div>
 <div class="footer-bar" style="border-top:1px solid rgba(255,255,255,.14);padding:26px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
 <span style="font-weight:700;font-size:14px">Maria Sakharova · Staff Product Researcher</span>
 <div class="footer-nav" style="display:flex;gap:22px;align-items:center">
-<a href="work.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Work</a>
-<a href="about.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">About</a>
-<a href="services.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Services</a>
-<a href="mentorship.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Mentorship</a>
+<a href="/work" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Work</a>
+<a href="/about" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">About</a>
+<a href="/services" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Services</a>
+<a href="/mentorship" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Mentorship</a>
 <span style="font-size:12.5px;color:#9b9991">© 2026</span>
 </div>
 </div>
@@ -486,15 +486,20 @@ class Component extends DCLogic {
 
   componentDidMount() {
     try {
-      var mt = (typeof location !== 'undefined' && location.search || '').match(/[?&]case=(\d+)/);
-      if (mt) {
-        var n = parseInt(mt[1], 10);
-        var len = this.data().length;
-        if (n >= 0 && n < len) {
-          this.setState({ view: 'detail', selected: n });
+      var mt0 = (typeof location !== 'undefined' && location.search || '').match(/[?&]case=([^&]+)/);
+      if (mt0) {
+        var idx0 = this.indexForCase(decodeURIComponent(mt0[1]));
+        if (idx0 >= 0) {
+          this.setState({ view: 'detail', selected: idx0 });
           if (typeof window !== 'undefined' && window.scrollTo) window.scrollTo({ top: 0 });
         }
       }
+      this._onPop = () => {
+        var m = (typeof location !== 'undefined' && location.search || '').match(/[?&]case=([^&]+)/);
+        if (m) { var i2 = this.indexForCase(decodeURIComponent(m[1])); if (i2 >= 0) { this.setState({ view: 'detail', selected: i2 }); if (typeof window !== 'undefined' && window.scrollTo) window.scrollTo({ top: 0 }); return; } }
+        this.setState({ view: 'catalogue' });
+      };
+      if (typeof window !== 'undefined') window.addEventListener('popstate', this._onPop);
     } catch (e) {}
     this._checkArrows = () => {
       try {
@@ -536,6 +541,40 @@ class Component extends DCLogic {
 
   componentWillUnmount() {
     if (typeof window !== 'undefined' && this._checkArrows) { window.removeEventListener('resize', this._checkArrows); if (this._bindRailArrows) window.removeEventListener('resize', this._bindRailArrows); }
+    if (typeof window !== 'undefined' && this._onPop) window.removeEventListener('popstate', this._onPop);
+  }
+
+  slugList() {
+    if (this._slugs) return this._slugs;
+    var stop = { the:1, a:1, an:1, of:1, for:1, to:1, and:1, with:1, in:1, on:1, at:1 };
+    var seen = {};
+    this._slugs = this.data().map(function (p) {
+      var base = String(p.title || '').toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function (w) { return w && !stop[w]; }).slice(0, 5).join('-');
+      if (!base) base = 'case';
+      var s = base, k = 2; while (seen[s]) { s = base + '-' + k; k++; } seen[s] = 1; return s;
+    });
+    return this._slugs;
+  }
+
+  indexForCase(v) {
+    if (v == null || v === '') return -1;
+    var s = this.slugList();
+    if (/^\d+$/.test(v)) { var n = parseInt(v, 10); return (n >= 0 && n < s.length) ? n : -1; }
+    return s.indexOf(String(v).toLowerCase());
+  }
+
+  _basePath() {
+    try { var p = (location.pathname || '/work').replace(/\.html?$/i, ''); return p || '/work'; } catch (e) { return '/work'; }
+  }
+
+  pushCase(idx) {
+    try {
+      if (typeof history === 'undefined' || !history.pushState) return;
+      var s = this.slugList();
+      var base = this._basePath();
+      var url = (idx == null || idx < 0) ? base : base + '?case=' + s[idx];
+      if ((location.pathname + location.search) !== url) history.pushState({ caseIdx: idx }, '', url);
+    } catch (e) {}
   }
 
   data() {
@@ -1078,10 +1117,10 @@ class Component extends DCLogic {
         logoEl: LOGOS[p.client] ? React.createElement('img', { src: LOGOS[p.client], alt: p.client, style: { height: '34px', width: 'auto', maxWidth: '100%', filter: 'brightness(0)', opacity: 0.82, display: 'block' } }) : null,
         hasRelated: all.some((x) => x.title === p.relatedTitle),
         relatedTitle: p.relatedTitle || '',
-        relatedOpen: () => { const ri = all.findIndex((x) => x.title === p.relatedTitle); if (ri >= 0) { this.setState({ view: 'detail', selected: ri }); if (typeof window !== 'undefined') window.scrollTo({ top: 0 }); } },
+        relatedOpen: () => { const ri = all.findIndex((x) => x.title === p.relatedTitle); if (ri >= 0) { this.setState({ view: 'detail', selected: ri }); this.pushCase(ri); if (typeof window !== 'undefined') window.scrollTo({ top: 0 }); } },
         sumBg: p.summaryColor || SUMS[i % SUMS.length].bg,
         sumLabel: SUMS[i % SUMS.length].label,
-        onOpen: () => { this.setState({ view: 'detail', selected: i }); if (typeof window !== 'undefined') window.scrollTo({ top: 0 }); },
+        onOpen: () => { this.setState({ view: 'detail', selected: i }); this.pushCase(i); if (typeof window !== 'undefined') window.scrollTo({ top: 0 }); },
       };
     };
     const cards = all.map(prep);
@@ -1137,9 +1176,9 @@ class Component extends DCLogic {
       sel,
       prevTitle: all[prevIdx].title,
       nextTitle: all[nextIdx].title,
-      closeDetail: () => this.setState({ view: 'catalogue' }),
-      goPrev: () => { this.setState({ selected: prevIdx }); if (typeof window !== 'undefined') window.scrollTo({ top: 0 }); },
-      goNext: () => { this.setState({ selected: nextIdx }); if (typeof window !== 'undefined') window.scrollTo({ top: 0 }); },
+      closeDetail: () => { this.setState({ view: 'catalogue' }); this.pushCase(-1); },
+      goPrev: () => { this.setState({ selected: prevIdx }); this.pushCase(prevIdx); if (typeof window !== 'undefined') window.scrollTo({ top: 0 }); },
+      goNext: () => { this.setState({ selected: nextIdx }); this.pushCase(nextIdx); if (typeof window !== 'undefined') window.scrollTo({ top: 0 }); },
     };
   }
 }

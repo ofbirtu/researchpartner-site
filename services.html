@@ -7,11 +7,11 @@
 <link rel="apple-touch-icon" href="favicon.png">
 <title>Services — Maria Sakharova</title>
 <meta name="description" content="Ways I can help your team make better product decisions — from finding product-market fit to launching profitable new products.">
-<link rel="canonical" href="https://researchpartner.uk/services.html">
+<link rel="canonical" href="https://researchpartner.uk/services">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Services — Maria Sakharova">
 <meta property="og:description" content="Ways I can help your team make better product decisions — from finding product-market fit to launching profitable new products.">
-<meta property="og:url" content="https://researchpartner.uk/services.html">
+<meta property="og:url" content="https://researchpartner.uk/services">
 <meta property="og:image" content="https://researchpartner.uk/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -140,7 +140,7 @@ if(document.fonts&&document.fonts.load){
     .then(function(){return document.fonts.ready;}).then(go).catch(go);
 }else{go();}
 setTimeout(go,2800);
-window.addEventListener('load',function(){setTimeout(function(){['index.html','work.html','about.html','services.html','mentorship.html'].forEach(function(h){if(decodeURIComponent(location.pathname).indexOf(h)>-1)return;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l);});},300);});})();
+window.addEventListener('load',function(){setTimeout(function(){['/','/work','/about','/services','/mentorship'].forEach(function(h){if(decodeURIComponent(location.pathname).indexOf(h)>-1)return;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l);});},300);});})();
 </script>
 <style>
   .swipe-hint{display:none}
@@ -207,17 +207,17 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <!-- fixed nav -->
 <div style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(232,232,236,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--pp-line)">
 <nav style="max-width:1200px;margin:0 auto;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-<a href="index.html" style="display:flex;flex-direction:column;line-height:1.15;text-decoration:none">
+<a href="/" style="display:flex;flex-direction:column;line-height:1.15;text-decoration:none">
 <span style="font-weight:700;font-size:17px;letter-spacing:-0.01em">Maria Sakharova</span>
 <span style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.06em;color:#5d6178;text-transform:uppercase;margin-top:2px">UX Research · Digital Strategy</span>
 </a>
 <input type="checkbox" id="navtoggle" hidden>
 <label for="navtoggle" class="nav-burger" aria-label="Toggle menu">☰</label>
 <div class="nav-links" style="display:flex;align-items:center;gap:28px">
-<a href="work.html" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">Work</a>
-<a href="about.html" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">About</a>
-<a href="services.html" style="font-size:14.5px;font-weight:700;text-decoration:none">Services</a>
-<a href="mentorship.html" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">Mentorship</a>
+<a href="/work" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">Work</a>
+<a href="/about" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">About</a>
+<a href="/services" style="font-size:14.5px;font-weight:700;text-decoration:none">Services</a>
+<a href="/mentorship" style="font-size:14.5px;font-weight:600;text-decoration:none;opacity:.75" style-hover="opacity:1">Mentorship</a>
 <a href="https://www.linkedin.com/in/mmmsakharova/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:7px;background:var(--pp-ink);color:#fff;font-size:14px;font-weight:600;padding:10px 18px;border-radius:100px;text-decoration:none" style-hover="background:#262626">Let's talk</a>
 </div>
 </nav>
@@ -263,7 +263,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;color:#8b8980">06</div>
 <div>
 <p style="margin:0 0 18px;font-size:20px;line-height:1.3;font-weight:600;color:#fff;letter-spacing:-0.01em">Is your challenge unique?</p>
-<a href="#" onClick="{{ copyEmail }}" style="display:inline-flex;white-space:nowrap;background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:12px 24px;border-radius:100px;text-decoration:none" style-hover="filter:brightness(1.05)">Email me</a>
+<a href="mailto:mmmsakharova@gmail.com" style="display:inline-flex;white-space:nowrap;background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:12px 24px;border-radius:100px;text-decoration:none" style-hover="filter:brightness(1.05)">Email me</a>
 </div>
 </div>
 
@@ -278,22 +278,22 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <h2 style="font-weight:800;font-size:clamp(40px,5vw,64px);line-height:1;letter-spacing:-0.03em;margin:0 0 24px">Let's scope it together</h2>
 <p style="font-size:17px;line-height:1.55;color:#c9c8c1;margin:0 0 28px;max-width:460px">Tell me where you are and what you're trying to decide. I'll tell you honestly whether I can help — and if not, I'll probably know someone who can.</p>
 <div class="cta-row" style="display:flex;gap:14px;flex-wrap:wrap">
-<a href="#" onClick="{{ copyEmail }}" style="background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:14px 24px;border-radius:100px;text-decoration:none">Email me</a>
+<a href="mailto:mmmsakharova@gmail.com" style="background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:14px 24px;border-radius:100px;text-decoration:none">Email me</a>
 <a href="https://www.linkedin.com/in/mmmsakharova/" target="_blank" rel="noopener" style="background:transparent;color:#fff;font-size:15px;font-weight:600;padding:14px 24px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.28)" style-hover="border-color:rgba(255,255,255,.55)">Connect on LinkedIn</a>
 </div>
 </div>
 <div style="display:flex;flex-direction:column;gap:20px">
-<div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Email</div><div style="font-size:15px;font-weight:600">mmmsakharova@gmail.com</div></div>
+<div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Email</div><div style="font-size:15px;font-weight:600"><a href="mailto:mmmsakharova@gmail.com" style="color:#fff;text-decoration:none;border-bottom:1px solid var(--pp-chartreuse);padding-bottom:1px">mmmsakharova@gmail.com</a></div></div>
 <div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Based in</div><div style="font-size:15px;font-weight:600">London, UK · Global Talent Visa</div></div>
 </div>
 </div>
 <div class="footer-bar" style="border-top:1px solid rgba(255,255,255,.14);padding:26px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
 <span style="font-weight:700;font-size:14px">Maria Sakharova · Staff Product Researcher</span>
 <div class="footer-nav" style="display:flex;gap:22px;align-items:center">
-<a href="work.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Work</a>
-<a href="about.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">About</a>
-<a href="services.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Services</a>
-<a href="mentorship.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Mentorship</a>
+<a href="/work" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Work</a>
+<a href="/about" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">About</a>
+<a href="/services" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Services</a>
+<a href="/mentorship" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Mentorship</a>
 <span style="font-size:12.5px;color:#9b9991">© 2026</span>
 </div>
 </div>

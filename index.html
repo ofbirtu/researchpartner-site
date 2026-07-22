@@ -160,7 +160,7 @@ if(document.fonts&&document.fonts.load){
     .then(function(){return document.fonts.ready;}).then(go).catch(go);
 }else{go();}
 setTimeout(go,2800);
-window.addEventListener('load',function(){setTimeout(function(){['index.html','work.html','about.html','services.html','mentorship.html'].forEach(function(h){if(decodeURIComponent(location.pathname).indexOf(h)>-1)return;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l);});},300);});window.addEventListener('pageshow',function(e){if(e.persisted){var vp=document.querySelector('meta[name=viewport]');if(vp){var c=vp.getAttribute('content');vp.setAttribute('content',c+',maximum-scale=1');requestAnimationFrame(function(){vp.setAttribute('content',c);});}}});})();
+window.addEventListener('load',function(){setTimeout(function(){['/','/work','/about','/services','/mentorship'].forEach(function(h){if(decodeURIComponent(location.pathname).indexOf(h)>-1)return;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l);});},300);});window.addEventListener('pageshow',function(e){if(e.persisted){var vp=document.querySelector('meta[name=viewport]');if(vp){var c=vp.getAttribute('content');vp.setAttribute('content',c+',maximum-scale=1');requestAnimationFrame(function(){vp.setAttribute('content',c);});}}});})();
 </script>
 <style>
   .swipe-hint{display:none}
@@ -183,7 +183,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
   .mw{padding-left:22px!important;padding-right:22px!important}
   .pageRoot>section{padding-top:46px!important;padding-bottom:46px!important}
 
-  section[data-screen-label="Hero"]{min-height:auto!important;padding-top:72px!important;padding-bottom:0!important;justify-content:flex-start!important}
+  section[data-screen-label="Hero"]{min-height:auto!important;padding-top:98px!important;padding-bottom:34px!important;justify-content:flex-start!important}
   .hero-inner{flex:1 1 auto!important;min-height:0!important;align-items:center!important;padding:2px 0 8px!important}
   .hero-wrap{grid-template-columns:1fr!important;gap:0!important;padding-left:22px!important;padding-right:22px!important}
   .hero-portrait{order:0!important;min-height:206px!important;transform:none!important;margin:0 auto 20px!important}
@@ -238,17 +238,17 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <!-- fixed nav -->
 <div style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)">
 <nav style="max-width:1240px;margin:0 auto;width:100%;padding:15px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-<a href="index.html" style="display:flex;flex-direction:column;line-height:1.15;text-decoration:none;color:#fff">
+<a href="/" style="display:flex;flex-direction:column;line-height:1.15;text-decoration:none;color:#fff">
 <span style="font-weight:700;font-size:17px;letter-spacing:-0.01em">Maria Sakharova</span>
 <span style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.06em;color:#8b8980;text-transform:uppercase;margin-top:2px">UX Research · Digital Strategy</span>
 </a>
 <input type="checkbox" id="navtoggle" hidden>
 <label for="navtoggle" class="nav-burger" aria-label="Toggle menu">☰</label>
 <div class="nav-links" style="display:flex;align-items:center;gap:28px">
-<a href="work.html" style="font-size:14.5px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Work</a>
-<a href="about.html" style="font-size:14.5px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">About</a>
-<a href="services.html" style="font-size:14.5px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Services</a>
-<a href="mentorship.html" style="font-size:14.5px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Mentorship</a>
+<a href="/work" style="font-size:14.5px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Work</a>
+<a href="/about" style="font-size:14.5px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">About</a>
+<a href="/services" style="font-size:14.5px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Services</a>
+<a href="/mentorship" style="font-size:14.5px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Mentorship</a>
 <a href="https://www.linkedin.com/in/mmmsakharova/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:var(--pp-chartreuse);color:var(--pp-ink);font-size:14px;font-weight:700;padding:10px 18px;border-radius:100px;text-decoration:none" style-hover="filter:brightness(1.05)">Let's talk</a>
 </div>
 </nav>
@@ -273,7 +273,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <p class="hero-sub" style="font-size:20px;line-height:1.6;font-weight:500;color:#b9b8b1;max-width:660px;margin:0 0 38px">With 10+ years of experience, I help startups turn <b>user&nbsp;research <br>into digital strategy</b> — creating innovative products that resonate with humans and generate millions in revenue.</p>
 
 <div class="hero-ctas" style="display:flex;align-items:center;gap:14px">
-<a href="work.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--pp-chartreuse);color:var(--pp-ink);font-size:16px;font-weight:700;padding:15px 28px;border-radius:100px;text-decoration:none" style-hover="filter:brightness(1.06)">See selected work →</a>
+<a href="/work" style="display:inline-flex;align-items:center;gap:8px;background:var(--pp-chartreuse);color:var(--pp-ink);font-size:16px;font-weight:700;padding:15px 28px;border-radius:100px;text-decoration:none" style-hover="filter:brightness(1.06)">See selected work →</a>
 <a href="https://www.linkedin.com/in/mmmsakharova/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-size:16px;font-weight:600;padding:15px 26px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.24)" style-hover="border-color:rgba(255,255,255,.5)">Connect on LinkedIn</a>
 </div>
 </div>
@@ -323,7 +323,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div>
 <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--pp-muted);margin-bottom:14px">PROJECTS I'M PROUD OF</div>
 <h2 style="font-weight:800;font-size:clamp(28px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;margin:0;max-width:560px">Selected work</h2>
-<a href="work.html" class="see-all-m" style="display:none;margin-top:14px;width:fit-content;font-weight:700;font-size:14.5px;color:var(--pp-ink);text-decoration:none;border-bottom:2px solid var(--pp-chartreuse);padding-bottom:3px">See all 14 case studies →</a>
+<a href="/work" class="see-all-m" style="display:inline-flex;margin-top:14px;width:fit-content;font-weight:700;font-size:14.5px;color:var(--pp-ink);text-decoration:none;border-bottom:2px solid var(--pp-chartreuse);padding-bottom:3px">See all 14 case studies →</a>
 </div>
 <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
 <button onClick="{{ scrollPrev }}" style="width:44px;height:44px;border-radius:50%;border:1px solid var(--pp-line);background:transparent;color:var(--pp-ink);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:var(--pp-paper)">←</button>
@@ -333,7 +333,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 
 <div id="work-track" class="pp-track" style="display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:48px;padding-bottom:8px;margin:0 -48px;padding-left:48px;padding-right:48px">
 
-<a href="work.html?case=0" class="pp-card" style="scroll-snap-align:start;flex:0 0 320px;background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--pp-ink)">
+<a href="/work?case=global-account-strategy-research-ai" class="pp-card" style="scroll-snap-align:start;flex:0 0 320px;background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--pp-ink)">
 <div style="background:var(--pp-chartreuse);padding:18px 18px 16px;min-height:132px;display:flex;flex-direction:column;justify-content:space-between">
 <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
 <div style="display:flex;flex-wrap:wrap;gap:6px">
@@ -351,7 +351,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </div>
 </a>
 
-<a href="work.html?case=1" class="pp-card" style="scroll-snap-align:start;flex:0 0 320px;background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--pp-ink)">
+<a href="/work?case=defining-trust-model-agentic-commerce" class="pp-card" style="scroll-snap-align:start;flex:0 0 320px;background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--pp-ink)">
 <div style="background:var(--pp-line);padding:18px 18px 16px;min-height:132px;display:flex;flex-direction:column;justify-content:space-between">
 <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
 <div style="display:flex;flex-wrap:wrap;gap:6px">
@@ -369,7 +369,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </div>
 </a>
 
-<a href="work.html?case=2" class="pp-card" style="scroll-snap-align:start;flex:0 0 320px;background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--pp-ink)">
+<a href="/work?case=redefining-adviser-growth" class="pp-card" style="scroll-snap-align:start;flex:0 0 320px;background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--pp-ink)">
 <div style="background:var(--pp-khaki);padding:18px 18px 16px;min-height:132px;display:flex;flex-direction:column;justify-content:space-between">
 <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
 <div style="display:flex;flex-wrap:wrap;gap:6px">
@@ -387,7 +387,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </div>
 </a>
 
-<a href="work.html?case=3" class="pp-card" style="scroll-snap-align:start;flex:0 0 320px;background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--pp-ink)">
+<a href="/work?case=creating-future-ai-workspace" class="pp-card" style="scroll-snap-align:start;flex:0 0 320px;background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--pp-ink)">
 <div style="background:var(--pp-peach);padding:18px 18px 16px;min-height:132px;display:flex;flex-direction:column;justify-content:space-between">
 <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
 <div style="display:flex;flex-wrap:wrap;gap:6px">
@@ -405,7 +405,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </div>
 </a>
 
-<a href="work.html?case=4" class="pp-card" style="scroll-snap-align:start;flex:0 0 320px;background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--pp-ink)">
+<a href="/work?case=redesigning-foundations-account" class="pp-card" style="scroll-snap-align:start;flex:0 0 320px;background:var(--pp-paper);border:1px solid var(--pp-line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--pp-ink)">
 <div style="background:var(--pp-peri);padding:18px 18px 16px;min-height:132px;display:flex;flex-direction:column;justify-content:space-between">
 <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
 <div style="display:flex;flex-wrap:wrap;gap:6px">
@@ -424,7 +424,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 </a>
 
 <div class="rail-cta" style="scroll-snap-align:start;flex:0 0 200px;display:flex;align-items:center;justify-content:center">
-<a href="work.html" style="display:inline-flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:var(--pp-ink)">
+<a href="/work" style="display:inline-flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:var(--pp-ink)">
 <span style="width:58px;height:58px;border-radius:50%;border:1px solid var(--pp-line);display:flex;align-items:center;justify-content:center;font-size:22px">→</span>
 <span style="font-weight:600;font-size:14px">All 14 case studies</span>
 </a>
@@ -447,7 +447,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <p style="margin:0"><strong style="color:var(--pp-ink)">With 10+ years in research, I've worked at every altitude</strong> — from shaping company strategy with C-suite leaders to sketching first concepts with designers — across fintech, edtech, e-commerce, legal, B2B SaaS, and AI startups, —&nbsp;scaling and leading research teams along the way.</p>
 
 <p style="margin:0"><strong style="color: var(--pp-ink);">The role flexes with the problem</strong> — from interviewing customers across markets to digging through&nbsp;data in Claude Code, facilitating strategy workshops with leadership, or shipping a quick prototype to learn faster. Research today means moving between analyst, strategist and builder.</p><p style="margin:0"><strong style="color: var(--pp-ink);">Teams bring me difficult questions; together, we find clear decisions</strong>&nbsp;— and strengthen the research practice with playbooks, processes, and automations that last beyond the project. Research lets me see the small routines that quietly shape people's lives. I don't think I'll ever stop finding that interesting.</p>
-<a href="about.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:8px;font-weight:700;font-size:15px;color:var(--pp-ink);text-decoration:none;border-bottom:2px solid var(--pp-chartreuse);padding-bottom:3px" style-hover="gap:12px">Read my full story →</a>
+<a href="/about" style="display:inline-flex;align-items:center;gap:8px;margin-top:8px;font-weight:700;font-size:15px;color:var(--pp-ink);text-decoration:none;border-bottom:2px solid var(--pp-chartreuse);padding-bottom:3px" style-hover="gap:12px">Read my full story →</a>
 </div>
 
 <!-- at a glance -->
@@ -517,22 +517,22 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 <div>
 <h2 style="font-weight:800;font-size:clamp(40px,5vw,68px);line-height:1;letter-spacing:-0.03em;margin:0 0 30px">Get in touch</h2>
 <div class="cta-row" style="display:flex;gap:14px;flex-wrap:wrap">
-<a href="#" onClick="{{ copyEmail }}" style="background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:14px 24px;border-radius:100px;text-decoration:none">Email me</a>
+<a href="mailto:mmmsakharova@gmail.com" style="background:var(--pp-chartreuse);color:var(--pp-ink);font-size:15px;font-weight:700;padding:14px 24px;border-radius:100px;text-decoration:none">Email me</a>
 <a href="https://www.linkedin.com/in/mmmsakharova/" target="_blank" rel="noopener" style="background:transparent;color:#fff;font-size:15px;font-weight:600;padding:14px 24px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.28)" style-hover="border-color:rgba(255,255,255,.55)">Connect on LinkedIn</a>
 </div>
 </div>
 <div style="display:flex;flex-direction:column;gap:20px">
-<div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Email</div><div style="font-size:15px;font-weight:600"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b363636283a30333a29342d3a1b3c363a323775383436">[email&#160;protected]</a></div></div>
+<div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Email</div><div style="font-size:15px;font-weight:600"><a href="mailto:mmmsakharova@gmail.com" style="color:#fff;text-decoration:none;border-bottom:1px solid var(--pp-chartreuse);padding-bottom:1px">mmmsakharova@gmail.com</a></div></div>
 <div><div style="font-size:12px;color:#9b9991;margin-bottom:5px">Based in</div><div style="font-size:15px;font-weight:600">London, UK · Global Talent Visa</div></div>
 </div>
 </div>
 <div class="footer-bar" style="border-top:1px solid rgba(255,255,255,.14);padding:26px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
 <span style="font-weight:700;font-size:14px">Maria Sakharova · Staff Product Researcher</span>
 <div class="footer-nav" style="display:flex;gap:22px;align-items:center">
-<a href="work.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Work</a>
-<a href="about.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">About</a>
-<a href="services.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Services</a>
-<a href="mentorship.html" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Mentorship</a>
+<a href="/work" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Work</a>
+<a href="/about" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">About</a>
+<a href="/services" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Services</a>
+<a href="/mentorship" style="font-size:13px;font-weight:600;color:#cfcec7;text-decoration:none" style-hover="color:#fff">Mentorship</a>
 <span style="font-size:12.5px;color:#9b9991">Built with Claude Code · © 2026</span>
 </div>
 </div>
@@ -544,7 +544,7 @@ window.addEventListener('load',function(){setTimeout(function(){['index.html','w
 
 </div>
 </x-dc>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
 class Component extends DCLogic {
   componentDidMount() {
     const t = document.getElementById('work-track');
